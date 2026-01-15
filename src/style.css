@@ -96,19 +96,119 @@ body {
 }
 
 /* ========== Scrollbar ========== */
+/* ========== Scrollbar ========== */
+/* Hide default scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 0px;
+    background: transparent;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f5f9;
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #94a3b8;
+/* Custom Status Bar */
+/* Custom Status Bar */
+#scroll-status-bar {
+    position: fixed;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-end;
+    /* Align to right */
+    padding-right: 1rem;
+}
+
+/* Remove vertical line */
+#scroll-status-bar::before {
+    display: none;
+}
+
+.status-dot {
+    width: 24px;
+    height: 3px;
+    background-color: #e2e8f0;
+    /* Light grey */
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #6
+/* Label Styling */
+.status-dot::before {
+
+    position: absolute;
+    right: 140%;
+    /* Position to left of line */
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    color: #4b5563;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #b1b1b1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+
+/* Show label on hover or when active */
+.status-dot:hover::before,
+.status-dot.active::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.status-dot.active::before {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Hover state for line */
+.status-dot:hover {
+    background-color: #94a3b8;
+    width: 32px;
+    /* Expand slightly on hover */
+}
+
+/* Active State */
+.status-dot.active {
+    width: 32px;
+    /* Longer line for active */
+    background-color: #1c1917;
+    /* Black/Dark */
+    height: 3px;
+    box-shadow: none;
+    border: none;
+}
+
+/* Dark mode adjustments */
+.bg-navy-900 .status-dot {
+    background-color: #334155;
+}
+
+.bg-navy-900 .status-dot.active {
+    background-color: #f8fafc;
+}
+
+.bg-navy-900 .status-dot:hover {
+    background-color: #64748b;
+}
+
+.bg-navy-900 .status-dot::before {
+    color: #94a3b8;
+}
+
+.bg-navy-900 .status-dot.active::before {
+    color: #f8fafc;
+}

@@ -183,6 +183,58 @@ function initMobileMenu() {
   });
 }
 
+// ========== SCROLL STATUS BAR ==========
+function initStatusBar() {
+  const dots = document.querySelectorAll(".status-dot");
+  const sections = [
+    { id: "top", element: document.body },
+    { id: "fleet", element: document.querySelector("#fleet") },
+    { id: "merry", element: document.querySelector("#merry") },
+    { id: "camarat", element: document.querySelector("#camarat") },
+    { id: "investment", element: document.querySelector("#investment") },
+  ];
+
+  // Click handler
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      const target = sections[index];
+      if (target && target.element) {
+        // Special case for top
+        if (target.id === "top") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          target.element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+  });
+
+  // Scroll handler
+  function updateActiveDot() {
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+    let activeIndex = 0;
+    sections.forEach((section, index) => {
+      if (section.element && section.element.offsetTop <= scrollPosition) {
+        activeIndex = index;
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      if (index === activeIndex) {
+        dot.classList.add("active");
+        dot.classList.remove("bg-white/20"); // In case we use transparency
+      } else {
+        dot.classList.remove("active");
+        // dot.classList.add('bg-white/20');
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveDot, { passive: true });
+  updateActiveDot(); // Initial check
+}
+
 // ========== INITIALIZE ==========
 document.addEventListener("DOMContentLoaded", () => {
   initGallery("merry", "merry-gallery");
@@ -190,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initKeyboardNav();
   initMobileMenu();
+  initStatusBar();
 
   console.log("FLIPS Yacht Investment initialized");
 });

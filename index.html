@@ -42,7 +42,7 @@
               },
             },
             fontFamily: {
-              display: ["Playfair Display", "serif"],
+              display: ["Google Sans", "Kanit", "serif"],
               sans: [
                 "Google Sans",
                 "Inter",
@@ -179,12 +179,13 @@
         <!-- Background Video -->
         <div class="absolute inset-0">
           <video
-            src="/260109_Hero_Video_for_web_yacht.mp4"
+            src="/public/Cap Camarat 10.5 CC - NEW 2023.mp4"
             autoplay
             muted
             loop
             playsinline
             class="w-full h-full object-cover opacity-30"
+            id="hero-video"
           ></video>
         </div>
 
@@ -193,68 +194,74 @@
           class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32"
         >
           <div class="max-w-3xl">
-            <!-- FLIPS Badge -->
-            <div
-              class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-fade-in"
-            >
+            
+            <!-- Left Column: Content -->
+
+              <!-- FLIPS Badge -->
               <div
-                class="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center"
+                class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-fade-in"
               >
-                <span class="text-white font-bold text-xs">F</span>
-              </div>
-              <span class="text-white/80 text-sm font-medium"
-                >FLIPS Fractional Investment</span
-              >
-            </div>
-
-            <!-- Main Headline -->
-            <h1
-              class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 animate-fade-up"
-            >
-              Luxury Yacht<br />
-              <span class="text-ocean-200">Ownership Redefined</span>
-            </h1>
-
-            <!-- Subheadline -->
-            <p
-              class="text-white/70 text-lg sm:text-xl max-w-xl mb-10 animate-fade-up"
-              style="animation-delay: 0.2s"
-            >
-              Experience the Andaman Sea aboard two world-class Jeanneau yachts.
-              Fractional ownership designed for discerning investors.
-            </p>
-
-            <!-- CTAs -->
-            <div
-              class="flex flex-col sm:flex-row gap-4 animate-fade-up"
-              style="animation-delay: 0.3s"
-            >
-              <a
-                href="#fleet"
-                class="inline-flex items-center justify-center gap-2 bg-white text-navy-900 font-semibold px-8 py-4 rounded-full hover:bg-ocean-100 transition-all hover:shadow-2xl"
-              >
-                Explore The Fleet
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <div
+                  class="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#investment"
-                class="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all"
+                  <span class="text-white font-bold text-xs">F</span>
+                </div>
+                <span class="text-white/80 text-sm font-medium"
+                  >FLIPS Fractional Investment</span
+                >
+              </div>
+  
+              <!-- Main Headline -->
+              <h1
+                class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 animate-fade-up"
               >
-                Investment Details
-              </a>
-            </div>
+                Luxury Yacht<br />
+                <span class="text-ocean-200">Ownership Redefined</span>
+              </h1>
+  
+              <!-- Subheadline -->
+              <p
+                class="text-white/70 text-lg sm:text-xl max-w-xl mb-10 animate-fade-up"
+                style="animation-delay: 0.2s"
+              >
+                Experience the Andaman Sea aboard two world-class Jeanneau yachts.
+                Fractional ownership designed for discerning investors.
+              </p>
+  
+              <!-- CTAs -->
+              <div
+                class="flex flex-col sm:flex-row gap-4 animate-fade-up"
+                style="animation-delay: 0.3s"
+              >
+                <a
+                  href="#fleet"
+                  class="inline-flex items-center justify-center gap-2 bg-white text-navy-900 font-semibold px-8 py-4 rounded-full hover:bg-ocean-100 transition-all hover:shadow-2xl"
+                >
+                  Explore The Fleet
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#investment"
+                  class="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all"
+                >
+                  Investment Details
+                </a>
+              </div>
+
+
+
           </div>
         </div>
 
@@ -1315,6 +1322,10 @@
           </div>
         </div>
       </section>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ==================== FOOTER ==================== -->
@@ -1337,7 +1348,16 @@
       </div>
     </footer>
 
-    <!-- Main JS -->
-    <script type="module" src="/src/main.js"></script>
+    <!-- Scroll Status Bar -->
+    <div id="scroll-status-bar">
+      <div class="status-dot active" data-label="Top"></div>
+      <div class="status-dot" data-label="The Fleet"></div>
+      <div class="status-dot" data-label="Merry Fisher"></div>
+      <div class="status-dot" data-label="Cap Camarat"></div>
+      <div class="status-dot" data-label="Investment"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/src/main.js"></script>
   </body>
 </html>
