@@ -1,885 +1,1343 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLIPS Yacht Investment | Merry Fisher 1095 FLY & Cap Camarat 10.5 CC | Phuket</title>
-    <meta name="description"
-        content="FLIPS Premium Yacht Investment - Fractional ownership of world-class Jeanneau yachts in Phuket, Thailand.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      FLIPS Yacht Investment | Merry Fisher 1095 FLY & Cap Camarat 10.5 CC |
+      Phuket
+    </title>
+    <meta
+      name="description"
+      content="FLIPS Premium Yacht Investment - Fractional ownership of world-class Jeanneau yachts in Phuket, Thailand."
+    />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            900: '#0a1628',
-                            800: '#0f2044',
-                            700: '#1a365d',
-                            600: '#234e70',
-                        },
-                        ocean: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            200: '#99f6e4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                        },
-                        luxury: {
-                            cream: '#fafaf9',
-                            sand: '#f5f5f4',
-                            charcoal: '#1c1917',
-                            slate: '#44403c',
-                        }
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                900: "#0a1628",
+                800: "#0f2044",
+                700: "#1a365d",
+                600: "#234e70",
+              },
+              ocean: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                200: "#99f6e4",
+                400: "#2dd4bf",
+                500: "#14b8a6",
+                600: "#0d9488",
+                700: "#0f766e",
+              },
+              luxury: {
+                cream: "#fafaf9",
+                sand: "#f5f5f4",
+                charcoal: "#1c1917",
+                slate: "#44403c",
+              },
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: [
+                "Google Sans",
+                "Inter",
+                "Noto Sans Thai",
+                "Kanit",
+                "system-ui",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/style.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/flips-logo.png">
-</head>
+    <link rel="icon" type="image/png" href="/images/flips-logo.png" />
+  </head>
 
-<body class="bg-luxury-cream text-luxury-charcoal antialiased">
-
+  <body class="bg-luxury-cream text-luxury-charcoal antialiased">
     <!-- ==================== HEADER ==================== -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- FLIPS Logo -->
+          <a href="/" class="flex items-center gap-3">
+            <img src="/images/flips-logo.png" alt="FLIPS" class="h-10 w-auto" />
+          </a>
 
-                <!-- FLIPS Logo -->
-                <a href="/" class="flex items-center gap-3">
-                    <img src="/images/flips-logo.png" alt="FLIPS" class="h-10 w-auto">
-                </a>
+          <!-- Navigation -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              href="#fleet"
+              class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition"
+              >The Fleet</a
+            >
+            <a
+              href="#merry"
+              class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition"
+              >Merry Fisher</a
+            >
+            <a
+              href="#camarat"
+              class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition"
+              >Cap Camarat</a
+            >
+            <a
+              href="#investment"
+              class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition"
+              >Investment</a
+            >
+          </nav>
 
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#fleet" class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition">The
-                        Fleet</a>
-                    <a href="#merry" class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition">Merry
-                        Fisher</a>
-                    <a href="#camarat" class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition">Cap
-                        Camarat</a>
-                    <a href="#investment"
-                        class="text-sm font-medium text-gray-600 hover:text-ocean-600 transition">Investment</a>
-                </nav>
+          <!-- CTA -->
+          <a
+            href="#investment"
+            class="hidden sm:inline-flex items-center gap-2 bg-navy-700 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-full text-sm transition-all hover:shadow-xl"
+          >
+            Invest Now
+          </a>
 
-                <!-- CTA -->
-                <a href="#investment"
-                    class="hidden sm:inline-flex items-center gap-2 bg-navy-700 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-full text-sm transition-all hover:shadow-xl">
-                    Invest Now
-                </a>
-
-                <!-- Mobile Menu -->
-                <button class="md:hidden p-2" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
+          <!-- Mobile Menu -->
+          <button class="md:hidden p-2" id="mobile-menu-btn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <!-- Mobile Menu Container -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg"
+      >
+        <div class="flex flex-col px-4 py-4 space-y-4">
+          <a
+            href="#fleet"
+            class="text-base font-medium text-gray-600 hover:text-ocean-600 transition block"
+            >The Fleet</a
+          >
+          <a
+            href="#merry"
+            class="text-base font-medium text-gray-600 hover:text-ocean-600 transition block"
+            >Merry Fisher</a
+          >
+          <a
+            href="#camarat"
+            class="text-base font-medium text-gray-600 hover:text-ocean-600 transition block"
+            >Cap Camarat</a
+          >
+          <a
+            href="#investment"
+            class="text-base font-medium text-gray-600 hover:text-ocean-600 transition block"
+            >Investment</a
+          >
+          <a
+            href="#investment"
+            class="inline-flex items-center justify-center gap-2 bg-navy-700 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-full text-base transition-all hover:shadow-xl w-full"
+          >
+            Invest Now
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="pt-20">
+      <!-- ==================== HERO SECTION ==================== -->
+      <section
+        class="hero-gradient min-h-[85vh] lg:min-h-[90vh] relative overflow-hidden"
+      >
+        <!-- Background Video -->
+        <div class="absolute inset-0">
+          <video
+            src="/260109_Hero_Video_for_web_yacht.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover opacity-30"
+          ></video>
+        </div>
 
-        <!-- ==================== HERO SECTION ==================== -->
-        <section class="hero-gradient min-h-[85vh] lg:min-h-[90vh] relative overflow-hidden">
-
-            <!-- Background Image -->
-            <div class="absolute inset-0">
-                <img src="/images/camarat/c96173b83d8365ae5b6595c7493b499c.jpg" alt="Yacht on water"
-                    class="w-full h-full object-cover opacity-30">
+        <!-- Content -->
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32"
+        >
+          <div class="max-w-3xl">
+            <!-- FLIPS Badge -->
+            <div
+              class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-fade-in"
+            >
+              <div
+                class="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-xs">F</span>
+              </div>
+              <span class="text-white/80 text-sm font-medium"
+                >FLIPS Fractional Investment</span
+              >
             </div>
 
-            <!-- Content -->
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-                <div class="max-w-3xl">
+            <!-- Main Headline -->
+            <h1
+              class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 animate-fade-up"
+            >
+              Luxury Yacht<br />
+              <span class="text-ocean-200">Ownership Redefined</span>
+            </h1>
 
-                    <!-- FLIPS Badge -->
-                    <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-fade-in">
-                        <div class="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center">
-                            <span class="text-white font-bold text-xs">F</span>
-                        </div>
-                        <span class="text-white/80 text-sm font-medium">FLIPS Fractional Investment</span>
-                    </div>
+            <!-- Subheadline -->
+            <p
+              class="text-white/70 text-lg sm:text-xl max-w-xl mb-10 animate-fade-up"
+              style="animation-delay: 0.2s"
+            >
+              Experience the Andaman Sea aboard two world-class Jeanneau yachts.
+              Fractional ownership designed for discerning investors.
+            </p>
 
-                    <!-- Main Headline -->
-                    <h1
-                        class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white font-bold leading-tight mb-6 animate-fade-up">
-                        Luxury Yacht<br>
-                        <span class="text-ocean-200">Ownership Redefined</span>
-                    </h1>
+            <!-- CTAs -->
+            <div
+              class="flex flex-col sm:flex-row gap-4 animate-fade-up"
+              style="animation-delay: 0.3s"
+            >
+              <a
+                href="#fleet"
+                class="inline-flex items-center justify-center gap-2 bg-white text-navy-900 font-semibold px-8 py-4 rounded-full hover:bg-ocean-100 transition-all hover:shadow-2xl"
+              >
+                Explore The Fleet
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#investment"
+                class="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all"
+              >
+                Investment Details
+              </a>
+            </div>
+          </div>
+        </div>
 
-                    <!-- Subheadline -->
-                    <p class="text-white/70 text-lg sm:text-xl max-w-xl mb-10 animate-fade-up"
-                        style="animation-delay: 0.2s">
-                        Experience the Andaman Sea aboard two world-class Jeanneau yachts.
-                        Fractional ownership designed for discerning investors.
-                    </p>
+        <!-- Bottom Stats Bar -->
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md border-t border-white/10"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <p class="text-3xl font-bold text-white">2</p>
+                <p class="text-white/60 text-sm">Premium Yachts</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-white">30M+</p>
+                <p class="text-white/60 text-sm">THB Fleet Value</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-white">99K</p>
+                <p class="text-white/60 text-sm">THB Entry Investment</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-white">5</p>
+                <p class="text-white/60 text-sm">Year Program</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-up" style="animation-delay: 0.3s">
-                        <a href="#fleet"
-                            class="inline-flex items-center justify-center gap-2 bg-white text-navy-900 font-semibold px-8 py-4 rounded-full hover:bg-ocean-100 transition-all hover:shadow-2xl">
-                            Explore The Fleet
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </a>
-                        <a href="#investment"
-                            class="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-full hover:bg-white/20 transition-all">
-                            Investment Details
-                        </a>
-                    </div>
+      <!-- ==================== FLEET OVERVIEW ==================== -->
+      <section id="fleet" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <div class="flex items-center justify-center gap-4 mb-4">
+              <span class="h-px w-12 bg-ocean-500"></span>
+              <p
+                class="text-ocean-600 font-semibold text-sm tracking-widest uppercase"
+              >
+                The Fleet
+              </p>
+              <span class="h-px w-12 bg-ocean-500"></span>
+            </div>
+            <h2
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal mb-4"
+            >
+              Two World-Class Yachts
+            </h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+              Your investment includes access to both vessels, each offering a
+              distinct sailing experience on the pristine waters of Phuket.
+            </p>
+          </div>
 
-                </div>
+          <!-- Fleet Cards -->
+          <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Merry Fisher Preview -->
+            <a
+              href="#merry"
+              class="group relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10]"
+            >
+              <img
+                src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png"
+                alt="Merry Fisher 1095 FLY"
+                class="w-full h-full object-cover img-zoom"
+              />
+              <div class="absolute inset-0 gradient-overlay"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+                <p class="text-white/70 text-sm font-medium mb-1">Jeanneau</p>
+                <h3 class="text-white text-2xl lg:text-3xl font-bold mb-2">
+                  Merry Fisher 1095 FLY
+                </h3>
+                <p class="text-white/80 text-sm mb-4">
+                  34-foot flybridge motor yacht
+                </p>
+                <span
+                  class="inline-flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all"
+                >
+                  Explore Details
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Cap Camarat Preview -->
+            <a
+              href="#camarat"
+              class="group relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10]"
+            >
+              <img
+                src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg"
+                alt="Cap Camarat 10.5 CC"
+                class="w-full h-full object-cover img-zoom"
+              />
+              <div class="absolute inset-0 gradient-overlay"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+                <p class="text-white/70 text-sm font-medium mb-1">Jeanneau</p>
+                <h3 class="text-white text-2xl lg:text-3xl font-bold mb-2">
+                  Cap Camarat 10.5 CC
+                </h3>
+                <p class="text-white/80 text-sm mb-4">
+                  33-foot center-console sports yacht
+                </p>
+                <span
+                  class="inline-flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all"
+                >
+                  Explore Details
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== MERRY FISHER 1095 FLY ==================== -->
+      <section id="merry" class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12"
+          >
+            <div>
+              <p
+                class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-2"
+              >
+                Jeanneau
+              </p>
+              <h2
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal"
+              >
+                Merry Fisher 1095 FLY
+              </h2>
+              <p class="text-ocean-600 italic text-lg mt-2">
+                "Built for Enjoyment"
+              </p>
+            </div>
+            <div class="flex items-center gap-6">
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">10.45m</p>
+                <p class="text-gray-500 text-xs uppercase">Length</p>
+              </div>
+              <div class="w-px h-10 bg-gray-300"></div>
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">3</p>
+                <p class="text-gray-500 text-xs uppercase">Cabins</p>
+              </div>
+              <div class="w-px h-10 bg-gray-300"></div>
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">600 HP</p>
+                <p class="text-gray-500 text-xs uppercase">Power</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Gallery -->
+          <div
+            class="bg-white rounded-3xl p-6 shadow-lg mb-12"
+            id="merry-gallery"
+          >
+            <!-- Gallery Tabs -->
+            <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
+              <button data-tab="all" class="gallery-tab active">
+                All Photos
+              </button>
+              <button data-tab="exterior" class="gallery-tab">Exterior</button>
+              <button data-tab="interior" class="gallery-tab">Interior</button>
+              <button data-tab="flybridge" class="gallery-tab">
+                Flybridge
+              </button>
             </div>
 
-            <!-- Bottom Stats Bar -->
-            <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md border-t border-white/10">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                        <div>
-                            <p class="text-3xl font-bold text-white">2</p>
-                            <p class="text-white/60 text-sm">Premium Yachts</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">30M+</p>
-                            <p class="text-white/60 text-sm">THB Fleet Value</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">99K</p>
-                            <p class="text-white/60 text-sm">THB Entry Investment</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">5</p>
-                            <p class="text-white/60 text-sm">Year Program</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Featured Image -->
+            <div
+              class="relative rounded-2xl overflow-hidden mb-4 aspect-[16/9]"
+            >
+              <img
+                class="featured-img w-full h-full object-cover transition-opacity duration-300"
+                src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png"
+                alt="Merry Fisher 1095 FLY"
+              />
+
+              <!-- Navigation Arrows -->
+              <button
+                class="nav-prev absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="nav-next absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+
+              <!-- Image Counter -->
+              <div
+                class="absolute bottom-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full img-counter"
+              >
+                1 / 8
+              </div>
             </div>
-        </section>
 
-        <!-- ==================== FLEET OVERVIEW ==================== -->
-        <section id="fleet" class="py-20 lg:py-28 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <div class="flex items-center justify-center gap-4 mb-4">
-                        <span class="h-px w-12 bg-ocean-500"></span>
-                        <p class="text-ocean-600 font-semibold text-sm tracking-widest uppercase">The Fleet</p>
-                        <span class="h-px w-12 bg-ocean-500"></span>
-                    </div>
-                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal mb-4">
-                        Two World-Class Yachts
-                    </h2>
-                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">
-                        Your investment includes access to both vessels, each offering a distinct sailing experience
-                        on the pristine waters of Phuket.
-                    </p>
-                </div>
-
-                <!-- Fleet Cards -->
-                <div class="grid lg:grid-cols-2 gap-8">
-
-                    <!-- Merry Fisher Preview -->
-                    <a href="#merry" class="group relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10]">
-                        <img src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png" alt="Merry Fisher 1095 FLY"
-                            class="w-full h-full object-cover img-zoom">
-                        <div class="absolute inset-0 gradient-overlay"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                            <p class="text-white/70 text-sm font-medium mb-1">Jeanneau</p>
-                            <h3 class="text-white text-2xl lg:text-3xl font-bold mb-2">Merry Fisher 1095 FLY</h3>
-                            <p class="text-white/80 text-sm mb-4">34-foot flybridge motor yacht</p>
-                            <span
-                                class="inline-flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all">
-                                Explore Details
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </span>
-                        </div>
-                    </a>
-
-                    <!-- Cap Camarat Preview -->
-                    <a href="#camarat"
-                        class="group relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10]">
-                        <img src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg" alt="Cap Camarat 10.5 CC"
-                            class="w-full h-full object-cover img-zoom">
-                        <div class="absolute inset-0 gradient-overlay"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                            <p class="text-white/70 text-sm font-medium mb-1">Jeanneau</p>
-                            <h3 class="text-white text-2xl lg:text-3xl font-bold mb-2">Cap Camarat 10.5 CC</h3>
-                            <p class="text-white/80 text-sm mb-4">33-foot center-console sports yacht</p>
-                            <span
-                                class="inline-flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all">
-                                Explore Details
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </span>
-                        </div>
-                    </a>
-
-                </div>
+            <!-- Thumbnails Strip -->
+            <div class="flex gap-2 overflow-x-auto p-2">
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ring-2 ring-ocean-500 ring-offset-2"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no4.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no6.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no8.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no9.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/merryfisher bedroom.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no5.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/merry/สำเนาของ merry fisher 1095 fly no12.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
             </div>
-        </section>
+          </div>
 
-        <!-- ==================== MERRY FISHER 1095 FLY ==================== -->
-        <section id="merry" class="py-20 lg:py-28 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Section Header -->
-                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-                    <div>
-                        <p class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-2">Jeanneau</p>
-                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal">
-                            Merry Fisher 1095 FLY
-                        </h2>
-                        <p class="text-ocean-600 italic text-lg mt-2">"Built for Enjoyment"</p>
-                    </div>
-                    <div class="flex items-center gap-6">
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">10.45m</p>
-                            <p class="text-gray-500 text-xs uppercase">Length</p>
-                        </div>
-                        <div class="w-px h-10 bg-gray-300"></div>
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">3</p>
-                            <p class="text-gray-500 text-xs uppercase">Cabins</p>
-                        </div>
-                        <div class="w-px h-10 bg-gray-300"></div>
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">600 HP</p>
-                            <p class="text-gray-500 text-xs uppercase">Power</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo Gallery -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg mb-12" id="merry-gallery">
-
-                    <!-- Gallery Tabs -->
-                    <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
-                        <button data-tab="all" class="gallery-tab active">All Photos</button>
-                        <button data-tab="exterior" class="gallery-tab">Exterior</button>
-                        <button data-tab="interior" class="gallery-tab">Interior</button>
-                        <button data-tab="flybridge" class="gallery-tab">Flybridge</button>
-                    </div>
-
-                    <!-- Featured Image -->
-                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-[16/9]">
-                        <img class="featured-img w-full h-full object-cover transition-opacity duration-300"
-                            src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png" alt="Merry Fisher 1095 FLY">
-
-                        <!-- Navigation Arrows -->
-                        <button
-                            class="nav-prev absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all">
-                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        <button
-                            class="nav-next absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all">
-                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-
-                        <!-- Image Counter -->
-                        <div
-                            class="absolute bottom-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full img-counter">
-                            1 / 8
-                        </div>
-                    </div>
-
-                    <!-- Thumbnails Strip -->
-                    <div class="flex gap-2 overflow-x-auto pb-2">
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ring-2 ring-ocean-500 ring-offset-2">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no2.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no4.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no6.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no8.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no9.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/merryfisher bedroom.png" alt="" class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no5.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/merry/สำเนาของ merry fisher 1095 fly no12.png" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Description & Features -->
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-xl font-bold text-luxury-charcoal mb-4">About This Yacht</h3>
-                        <p class="text-gray-600 leading-relaxed mb-6">
-                            The Merry Fisher 1095 FLY represents the pinnacle of flybridge motor yacht design.
-                            With its spacious flybridge, versatile saloon, and three private cabins, this yacht
-                            delivers the perfect balance of performance, comfort, and style.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Whether you're cruising the islands of Phuket or anchoring in a secluded bay,
-                            the Merry Fisher provides all the amenities needed for an unforgettable experience
-                            on the water.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-luxury-charcoal mb-4">Key Features</h3>
-                        <ul class="grid grid-cols-2 gap-3">
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Spacious flybridge with sunpad
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                3 private cabins
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Full air conditioning
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Twin 300 HP engines
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Gyroscopic stabilizer
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Full galley kitchen
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+          <!-- Description & Features -->
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-bold text-luxury-charcoal mb-4">
+                About This Yacht
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                The Merry Fisher 1095 FLY represents the pinnacle of flybridge
+                motor yacht design. With its spacious flybridge, versatile
+                saloon, and three private cabins, this yacht delivers the
+                perfect balance of performance, comfort, and style.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                Whether you're cruising the islands of Phuket or anchoring in a
+                secluded bay, the Merry Fisher provides all the amenities needed
+                for an unforgettable experience on the water.
+              </p>
             </div>
-        </section>
-
-        <!-- ==================== CAP CAMARAT 10.5 CC ==================== -->
-        <section id="camarat" class="py-20 lg:py-28 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- Section Header -->
-                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-                    <div>
-                        <p class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-2">Jeanneau</p>
-                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal">
-                            Cap Camarat 10.5 CC
-                        </h2>
-                        <p class="text-ocean-600 italic text-lg mt-2">"Built for Adventure"</p>
-                    </div>
-                    <div class="flex items-center gap-6">
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">10.90m</p>
-                            <p class="text-gray-500 text-xs uppercase">Length</p>
-                        </div>
-                        <div class="w-px h-10 bg-gray-300"></div>
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">8</p>
-                            <p class="text-gray-500 text-xs uppercase">Max PAX</p>
-                        </div>
-                        <div class="w-px h-10 bg-gray-300"></div>
-                        <div class="text-center">
-                            <p class="text-2xl font-bold text-luxury-charcoal">600 HP</p>
-                            <p class="text-gray-500 text-xs uppercase">Power</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo Gallery -->
-                <div class="bg-gray-50 rounded-3xl p-6 shadow-lg mb-12" id="camarat-gallery">
-
-                    <!-- Gallery Tabs -->
-                    <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
-                        <button data-tab="all" class="gallery-tab active">All Photos</button>
-                        <button data-tab="exterior" class="gallery-tab">Exterior</button>
-                        <button data-tab="deck" class="gallery-tab">Deck</button>
-                        <button data-tab="lifestyle" class="gallery-tab">Lifestyle</button>
-                    </div>
-
-                    <!-- Featured Image -->
-                    <div class="relative rounded-2xl overflow-hidden mb-4 aspect-[16/9]">
-                        <img class="featured-img w-full h-full object-cover transition-opacity duration-300"
-                            src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg" alt="Cap Camarat 10.5 CC">
-
-                        <!-- Navigation Arrows -->
-                        <button
-                            class="nav-prev absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all">
-                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        <button
-                            class="nav-next absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all">
-                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-
-                        <!-- Image Counter -->
-                        <div
-                            class="absolute bottom-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full img-counter">
-                            1 / 10
-                        </div>
-                    </div>
-
-                    <!-- Thumbnails Strip -->
-                    <div class="flex gap-2 overflow-x-auto pb-2">
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ring-2 ring-ocean-500 ring-offset-2">
-                            <img src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/3d1419f0f1dc55bcf446c7060a1e68f7.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/641c207101657dee364371efd7ab78db.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/8766d168768a4b3bad3938ae6fa5a81a.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/962db5ee9590527c95f3be29a961d9c2.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/c96173b83d8365ae5b6595c7493b499c.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/33ae4bd98ca6991d7ab2632876e1ab87.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/95ebe9151fa9e66bed139fb91da7c1b3.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/bab15785f906f7eca38a7e2a395378fa.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button
-                            class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
-                            <img src="/images/camarat/cc17b76dcd540dd0d8287370a2a69b99.jpg" alt=""
-                                class="w-full h-full object-cover">
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Description & Features -->
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-xl font-bold text-luxury-charcoal mb-4">About This Yacht</h3>
-                        <p class="text-gray-600 leading-relaxed mb-6">
-                            The Cap Camarat 10.5 CC is a powerful center-console yacht designed for those
-                            who seek performance and adventure. With its open deck layout and
-                            deep-V hull, this vessel excels in open-water conditions.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Perfect for day trips, fishing excursions, or social cruising with friends,
-                            the Cap Camarat offers a thrilling on-water experience with premium comfort
-                            and style.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-luxury-charcoal mb-4">Key Features</h3>
-                        <ul class="grid grid-cols-2 gap-3">
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Open center-console design
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Up to 8 passengers
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Deep-V hull for stability
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                2×300 HP outboards
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                T-Top with shade
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-600 text-sm">
-                                <svg class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Underwater LED lights
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+            <div>
+              <h3 class="text-xl font-bold text-luxury-charcoal mb-4">
+                Key Features
+              </h3>
+              <ul class="grid grid-cols-2 gap-3">
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Spacious flybridge with sunpad
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  3 private cabins
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Full air conditioning
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Twin 300 HP engines
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Gyroscopic stabilizer
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Full galley kitchen
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- ==================== SPECIFICATIONS COMPARISON ==================== -->
-        <section class="py-20 lg:py-28 bg-gray-50">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="text-center mb-12">
-                    <p class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-3">Technical Details</p>
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-luxury-charcoal">
-                        Specifications Comparison
-                    </h2>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="overflow-x-auto">
-                        <table class="w-full min-w-[500px]">
-                            <thead class="bg-navy-800 text-white">
-                                <tr>
-                                    <th class="text-left py-5 px-6 font-semibold">Specification</th>
-                                    <th class="text-center py-5 px-6 font-semibold">Merry Fisher 1095 FLY</th>
-                                    <th class="text-center py-5 px-6 font-semibold">Cap Camarat 10.5 CC</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100">
-                                <tr>
-                                    <td class="py-4 px-6 text-gray-600">Length Overall</td>
-                                    <td class="py-4 px-6 text-center font-semibold">10.45m / 34'3"</td>
-                                    <td class="py-4 px-6 text-center font-semibold">10.90m / 35'9"</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-4 px-6 text-gray-600">Hull Beam</td>
-                                    <td class="py-4 px-6 text-center font-semibold">3.25m / 10'7"</td>
-                                    <td class="py-4 px-6 text-center font-semibold">3.37m / 11'1"</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-4 px-6 text-gray-600">Draft</td>
-                                    <td class="py-4 px-6 text-center font-semibold">0.73m / 2'4"</td>
-                                    <td class="py-4 px-6 text-center font-semibold">0.95m / 3'1"</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-4 px-6 text-gray-600">Weight</td>
-                                    <td class="py-4 px-6 text-center font-semibold">4,582 kg</td>
-                                    <td class="py-4 px-6 text-center font-semibold">5,300 kg</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-4 px-6 text-gray-600">Fuel Capacity</td>
-                                    <td class="py-4 px-6 text-center font-semibold">800L</td>
-                                    <td class="py-4 px-6 text-center font-semibold">800L</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-4 px-6 text-gray-600">Engines</td>
-                                    <td class="py-4 px-6 text-center font-semibold">2×300 HP</td>
-                                    <td class="py-4 px-6 text-center font-semibold">2×300 HP</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-4 px-6 text-gray-600">Cabins</td>
-                                    <td class="py-4 px-6 text-center font-semibold">3</td>
-                                    <td class="py-4 px-6 text-center font-semibold">1+1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+      <!-- ==================== CAP CAMARAT 10.5 CC ==================== -->
+      <section id="camarat" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12"
+          >
+            <div>
+              <p
+                class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-2"
+              >
+                Jeanneau
+              </p>
+              <h2
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-luxury-charcoal"
+              >
+                Cap Camarat 10.5 CC
+              </h2>
+              <p class="text-ocean-600 italic text-lg mt-2">
+                "Built for Adventure"
+              </p>
             </div>
-        </section>
-
-        <!-- ==================== INVESTMENT PROGRAM ==================== -->
-        <section id="investment" class="py-20 lg:py-28 hero-gradient text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <!-- FLIPS Badge -->
-                <div class="text-center mb-12">
-                    <div class="inline-flex items-center gap-3 glass px-6 py-3 rounded-full mb-6">
-                        <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
-                            <span class="text-white font-bold">F</span>
-                        </div>
-                        <span class="font-semibold">FLIPS Member Fraction Program</span>
-                    </div>
-                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                        Your Investment Opportunity
-                    </h2>
-                    <p class="text-white/70 text-lg max-w-2xl mx-auto">
-                        Fractional yacht ownership designed for lifestyle investors.
-                        All the benefits of ownership, none of the hassle.
-                    </p>
-                </div>
-
-                <!-- Investment Cards -->
-                <div class="grid lg:grid-cols-2 gap-8 mb-12">
-
-                    <!-- Program Details -->
-                    <div class="glass rounded-3xl p-8">
-                        <h3 class="text-2xl font-bold mb-6">Your Ownership Benefits</h3>
-
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-white/10 rounded-xl p-5 text-center">
-                                <div class="text-4xl mb-2">🎫</div>
-                                <div class="text-3xl font-bold">2</div>
-                                <div class="text-white/60 text-sm">Tickets per Year</div>
-                            </div>
-                            <div class="bg-white/10 rounded-xl p-5 text-center">
-                                <div class="text-4xl mb-2">⏱️</div>
-                                <div class="text-3xl font-bold">4</div>
-                                <div class="text-white/60 text-sm">Hours per Trip</div>
-                            </div>
-                        </div>
-
-                        <div class="bg-gradient-to-r from-ocean-600 to-ocean-500 rounded-xl px-6 py-4 mb-6">
-                            <p class="font-semibold text-lg">Total 10 Tickets over 5 Years</p>
-                        </div>
-
-                        <div class="mb-6">
-                            <span class="text-5xl font-bold">THB 99,000</span>
-                            <span class="text-white/60 ml-2">per member fraction</span>
-                        </div>
-
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Access to both yachts in the fleet
-                            </li>
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Priority booking over charter customers
-                            </li>
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                No maintenance or crew management costs
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Flexibility Card -->
-                    <div class="glass rounded-3xl p-8">
-                        <h3 class="text-2xl font-bold mb-4">Cruise or Cash Flexibility</h3>
-                        <p class="text-white/70 mb-6">Use your time — or convert it to value</p>
-
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Inform us within 90 days if you won't use your voucher
-                            </li>
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Match with charter demand at <strong class="text-white">THB 9,900</strong> per voucher
-                            </li>
-                            <li class="flex items-start gap-3 text-white/80">
-                                <svg class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Or list on the MVP Exchange at market price
-                            </li>
-                        </ul>
-
-                        <div class="bg-white/10 rounded-2xl p-6 text-center">
-                            <div class="flex items-center justify-around">
-                                <div>
-                                    <div class="text-white/60 text-xs mb-2">Within 90 Days</div>
-                                    <div class="text-4xl">💰</div>
-                                    <div class="text-white/60 text-xs mt-2">Charter Match</div>
-                                </div>
-                                <div class="text-3xl text-white/40">→</div>
-                                <div>
-                                    <div class="text-white/60 text-xs mb-2">Anytime</div>
-                                    <div class="text-4xl">📊</div>
-                                    <div class="text-white/60 text-xs mt-2">MVP Exchange</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="text-ocean-300 italic mt-6 text-center">A lifestyle that adapts to your schedule.</p>
-                    </div>
-
-                </div>
-
-                <!-- CTA -->
-                <div class="text-center">
-                    <a href="#"
-                        class="inline-flex items-center gap-3 bg-white text-navy-900 font-bold px-10 py-5 rounded-full text-lg hover:bg-ocean-100 transition-all hover:shadow-2xl">
-                        Start Your Investment
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-
+            <div class="flex items-center gap-6">
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">10.90m</p>
+                <p class="text-gray-500 text-xs uppercase">Length</p>
+              </div>
+              <div class="w-px h-10 bg-gray-300"></div>
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">8</p>
+                <p class="text-gray-500 text-xs uppercase">Max PAX</p>
+              </div>
+              <div class="w-px h-10 bg-gray-300"></div>
+              <div class="text-center">
+                <p class="text-2xl font-bold text-luxury-charcoal">600 HP</p>
+                <p class="text-gray-500 text-xs uppercase">Power</p>
+              </div>
             </div>
-        </section>
+          </div>
 
+          <!-- Photo Gallery -->
+          <div
+            class="bg-gray-50 rounded-3xl p-6 shadow-lg mb-12"
+            id="camarat-gallery"
+          >
+            <!-- Gallery Tabs -->
+            <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
+              <button data-tab="all" class="gallery-tab active">
+                All Photos
+              </button>
+              <button data-tab="exterior" class="gallery-tab">Exterior</button>
+              <button data-tab="deck" class="gallery-tab">Deck</button>
+              <button data-tab="lifestyle" class="gallery-tab">
+                Lifestyle
+              </button>
+            </div>
+
+            <!-- Featured Image -->
+            <div
+              class="relative rounded-2xl overflow-hidden mb-4 aspect-[16/9]"
+            >
+              <img
+                class="featured-img w-full h-full object-cover transition-opacity duration-300"
+                src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg"
+                alt="Cap Camarat 10.5 CC"
+              />
+
+              <!-- Navigation Arrows -->
+              <button
+                class="nav-prev absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="nav-next absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+
+              <!-- Image Counter -->
+              <div
+                class="absolute bottom-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full img-counter"
+              >
+                1 / 10
+              </div>
+            </div>
+
+            <!-- Thumbnails Strip -->
+            <div class="flex gap-2 overflow-x-auto p-5">
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ring-2 ring-ocean-500 ring-offset-2"
+              >
+                <img
+                  src="/images/camarat/77ac1c1dc7b378bb076cf0b4c253b68f.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/3d1419f0f1dc55bcf446c7060a1e68f7.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/641c207101657dee364371efd7ab78db.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/8766d168768a4b3bad3938ae6fa5a81a.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/962db5ee9590527c95f3be29a961d9c2.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/c96173b83d8365ae5b6595c7493b499c.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/33ae4bd98ca6991d7ab2632876e1ab87.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/95ebe9151fa9e66bed139fb91da7c1b3.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/bab15785f906f7eca38a7e2a395378fa.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button
+                class="thumb-btn flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden opacity-60 hover:opacity-100 transition-opacity"
+              >
+                <img
+                  src="/images/camarat/cc17b76dcd540dd0d8287370a2a69b99.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!-- Description & Features -->
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-bold text-luxury-charcoal mb-4">
+                About This Yacht
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                The Cap Camarat 10.5 CC is a powerful center-console yacht
+                designed for those who seek performance and adventure. With its
+                open deck layout and deep-V hull, this vessel excels in
+                open-water conditions.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                Perfect for day trips, fishing excursions, or social cruising
+                with friends, the Cap Camarat offers a thrilling on-water
+                experience with premium comfort and style.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-luxury-charcoal mb-4">
+                Key Features
+              </h3>
+              <ul class="grid grid-cols-2 gap-3">
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Open center-console design
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Up to 8 passengers
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Deep-V hull for stability
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  2×300 HP outboards
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  T-Top with shade
+                </li>
+                <li class="flex items-start gap-2 text-gray-600 text-sm">
+                  <svg
+                    class="w-5 h-5 text-ocean-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Underwater LED lights
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SPECIFICATIONS COMPARISON ==================== -->
+      <section class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <p
+              class="text-ocean-600 font-semibold text-sm tracking-widest uppercase mb-3"
+            >
+              Technical Details
+            </p>
+            <h2
+              class="font-display text-3xl sm:text-4xl font-bold text-luxury-charcoal"
+            >
+              Specifications Comparison
+            </h2>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[500px]">
+                <thead class="bg-navy-800 text-white">
+                  <tr>
+                    <th class="text-left py-5 px-6 font-semibold">
+                      Specification
+                    </th>
+                    <th class="text-center py-5 px-6 font-semibold">
+                      Merry Fisher 1095 FLY
+                    </th>
+                    <th class="text-center py-5 px-6 font-semibold">
+                      Cap Camarat 10.5 CC
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr>
+                    <td class="py-4 px-6 text-gray-600">Length Overall</td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      10.45m / 34'3"
+                    </td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      10.90m / 35'9"
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="py-4 px-6 text-gray-600">Hull Beam</td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      3.25m / 10'7"
+                    </td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      3.37m / 11'1"
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 px-6 text-gray-600">Draft</td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      0.73m / 2'4"
+                    </td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      0.95m / 3'1"
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="py-4 px-6 text-gray-600">Weight</td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      4,582 kg
+                    </td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      5,300 kg
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 px-6 text-gray-600">Fuel Capacity</td>
+                    <td class="py-4 px-6 text-center font-semibold">800L</td>
+                    <td class="py-4 px-6 text-center font-semibold">800L</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="py-4 px-6 text-gray-600">Engines</td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      2×300 HP
+                    </td>
+                    <td class="py-4 px-6 text-center font-semibold">
+                      2×300 HP
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 px-6 text-gray-600">Cabins</td>
+                    <td class="py-4 px-6 text-center font-semibold">3</td>
+                    <td class="py-4 px-6 text-center font-semibold">1+1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== INVESTMENT PROGRAM ==================== -->
+      <section id="investment" class="py-20 lg:py-28 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- FLIPS Badge -->
+          <div class="text-center mb-12">
+            <div
+              class="inline-flex items-center gap-3 glass px-6 py-3 rounded-full mb-6"
+            >
+              <div
+                class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center"
+              >
+                <span class="text-white font-bold">F</span>
+              </div>
+              <span class="font-semibold">FLIPS Member Fraction Program</span>
+            </div>
+            <h2
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              Your Investment Opportunity
+            </h2>
+            <p class="text-white/70 text-lg max-w-2xl mx-auto">
+              Fractional yacht ownership designed for lifestyle investors. All
+              the benefits of ownership, none of the hassle.
+            </p>
+          </div>
+
+          <!-- Investment Cards -->
+          <div class="grid lg:grid-cols-2 gap-8 mb-12">
+            <!-- Program Details -->
+            <div class="glass rounded-3xl p-8">
+              <h3 class="text-2xl font-bold mb-6">Your Ownership Benefits</h3>
+
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white/10 rounded-xl p-5 text-center">
+                  <div class="text-4xl mb-2">🎫</div>
+                  <div class="text-3xl font-bold">2</div>
+                  <div class="text-white/60 text-sm">Tickets per Year</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-5 text-center">
+                  <div class="text-4xl mb-2">⏱️</div>
+                  <div class="text-3xl font-bold">4</div>
+                  <div class="text-white/60 text-sm">Hours per Trip</div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-ocean-600 to-ocean-500 rounded-xl px-6 py-4 mb-6"
+              >
+                <p class="font-semibold text-lg">
+                  Total 10 Tickets over 5 Years
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <span class="text-5xl font-bold">THB 99,000</span>
+                <span class="text-white/60 ml-2">per member fraction</span>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Access to both yachts in the fleet
+                </li>
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Priority booking over charter customers
+                </li>
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  No maintenance or crew management costs
+                </li>
+              </ul>
+            </div>
+
+            <!-- Flexibility Card -->
+            <div class="glass rounded-3xl p-8">
+              <h3 class="text-2xl font-bold mb-4">
+                Cruise or Cash Flexibility
+              </h3>
+              <p class="text-white/70 mb-6">
+                Use your time — or convert it to value
+              </p>
+
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Inform us within 90 days if you won't use your voucher
+                </li>
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Match with charter demand at
+                  <strong class="text-white">THB 9,900</strong> per voucher
+                </li>
+                <li class="flex items-start gap-3 text-white/80">
+                  <svg
+                    class="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Or list on the MVP Exchange at market price
+                </li>
+              </ul>
+
+              <div class="bg-white/10 rounded-2xl p-6 text-center">
+                <div class="flex items-center justify-around">
+                  <div>
+                    <div class="text-white/60 text-xs mb-2">Within 90 Days</div>
+                    <div class="text-4xl">💰</div>
+                    <div class="text-white/60 text-xs mt-2">Charter Match</div>
+                  </div>
+                  <div class="text-3xl text-white/40">→</div>
+                  <div>
+                    <div class="text-white/60 text-xs mb-2">Anytime</div>
+                    <div class="text-4xl">📊</div>
+                    <div class="text-white/60 text-xs mt-2">MVP Exchange</div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-ocean-300 italic mt-6 text-center">
+                A lifestyle that adapts to your schedule.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center">
+            <a
+              href="#"
+              class="inline-flex items-center gap-3 bg-white text-navy-900 font-bold px-10 py-5 rounded-full text-lg hover:bg-ocean-100 transition-all hover:shadow-2xl"
+            >
+              Start Your Investment
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="bg-navy-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <a href="/" class="flex items-center gap-3">
-                    <img src="/images/flips-logo.png" alt="FLIPS" class="h-10 w-auto brightness-0 invert">
-                </a>
-                <p class="text-white/50 text-sm">© 2026 FLIPS Investment — Phuket, Thailand</p>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <a href="/" class="flex items-center gap-3">
+            <img
+              src="/images/flips-logo.png"
+              alt="FLIPS"
+              class="h-10 w-auto brightness-0 invert"
+            />
+          </a>
+          <p class="text-white/50 text-sm">
+            © 2026 FLIPS Investment — Phuket, Thailand
+          </p>
         </div>
+      </div>
     </footer>
 
     <!-- Main JS -->
     <script type="module" src="/src/main.js"></script>
-
-</body>
-
+  </body>
 </html>

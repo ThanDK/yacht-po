@@ -4,13 +4,13 @@ html {
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Google Sans', 'Inter', 'Noto Sans Thai', 'Kanit', system-ui, sans-serif;
     background-color: #fafaf9;
     color: #1c1917;
 }
 
 .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Google Sans', 'Kanit', sans-serif;
 }
 
 /* ========== Animations ========== */
@@ -111,5 +111,4 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
-}
+    background: #6
