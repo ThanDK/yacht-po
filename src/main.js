@@ -60,9 +60,8 @@ function initGallery(yachtKey, containerId) {
 
     // Update counter
     if (counter) {
-      counter.textContent = `${yacht.currentIndex + 1} / ${
-        yacht.images.length
-      }`;
+      counter.textContent = `${yacht.currentIndex + 1} / ${yacht.images.length
+        }`;
     }
 
     // Update thumbnail highlights
@@ -234,6 +233,77 @@ function initStatusBar() {
   window.addEventListener("scroll", updateActiveDot, { passive: true });
   updateActiveDot(); // Initial check
 }
+// ========== FULLSCREEN LIGHTBOX ==========
+let currentLightboxYacht = null;
+
+function initLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCounter = document.getElementById("lightbox-counter");
+  const closeBtn = document.getElementById("lightbox-close");
+  const prevBtn = document.getElementById("lightbox-prev");
+  const nextBtn = document.getElementById("lightbox-next");
+
+  if (!lightbox) return;
+
+  function openLightbox(yachtKey) {
+    currentLightboxYacht = yachtKey;
+    const yacht = yachtData[yachtKey];
+    lightboxImg.src = yacht.images[yacht.currentIndex];
+    lightboxCounter.textContent = `${yacht.currentIndex + 1} / ${yacht.images.length}`;
+    lightbox.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add("hidden");
+    document.body.style.overflow = "";
+    currentLightboxYacht = null;
+  }
+
+  function navigateLightbox(direction) {
+    if (!currentLightboxYacht) return;
+    const yacht = yachtData[currentLightboxYacht];
+    if (direction === "next") {
+      yacht.currentIndex = (yacht.currentIndex + 1) % yacht.images.length;
+    } else {
+      yacht.currentIndex = (yacht.currentIndex - 1 + yacht.images.length) % yacht.images.length;
+    }
+    lightboxImg.src = yacht.images[yacht.currentIndex];
+    lightboxCounter.textContent = `${yacht.currentIndex + 1} / ${yacht.images.length}`;
+  }
+
+  // Click on featured images to open lightbox
+  document.querySelectorAll(".featured-img").forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+      // Determine which yacht gallery this belongs to
+      const container = img.closest("[id$='-gallery']");
+      if (container) {
+        const yachtKey = container.id.replace("-gallery", "");
+        openLightbox(yachtKey);
+      }
+    });
+  });
+
+  // Close lightbox
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Navigation
+  prevBtn.addEventListener("click", () => navigateLightbox("prev"));
+  nextBtn.addEventListener("click", () => navigateLightbox("next"));
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.classList.contains("hidden")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") navigateLightbox("next");
+    if (e.key === "ArrowLeft") navigateLightbox("prev");
+  });
+}
 
 // ========== INITIALIZE ==========
 document.addEventListener("DOMContentLoaded", () => {
@@ -243,6 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initKeyboardNav();
   initMobileMenu();
   initStatusBar();
+  initLightbox();
 
   console.log("FLIPS Yacht Investment initialized");
 });
