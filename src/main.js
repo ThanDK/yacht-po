@@ -313,38 +313,42 @@ function forceVideoPlay() {
   function attemptPlay(video) {
     if (!video) return;
 
+    // Ensure video is muted (required for autoplay)
+    video.muted = true;
+
     const playPromise = video.play();
 
     if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          console.log("Video playing successfully");
-        })
-        .catch((error) => {
-          console.log("Autoplay prevented, retrying...", error);
-          // Retry after user interaction
-          document.addEventListener(
-            "click",
-            () => {
-              video.play();
-            },
-            { once: true }
-          );
-        });
+      playPromise.catch(() => {
+        // Autoplay blocked - wait for user interaction
+        document.addEventListener("click", () => video.play(), { once: true });
+        document.addEventListener("touchstart", () => video.play(), { once: true });
+        document.addEventListener("scroll", () => video.play(), { once: true });
+      });
     }
   }
 
-  // Try to play immediately
-  if (heroVideo) attemptPlay(heroVideo);
-  if (mobileVideo) attemptPlay(mobileVideo);
+  // Try multiple events to ensure video plays
+  function setupVideoPlay(video) {
+    if (!video) return;
 
-  // Also try when video metadata loads
-  if (heroVideo) {
-    heroVideo.addEventListener("loadeddata", () => attemptPlay(heroVideo));
+    // Play immediately if ready
+    attemptPlay(video);
+
+    // Play when video data is ready
+    video.addEventListener("loadeddata", () => attemptPlay(video));
+    video.addEventListener("canplaythrough", () => attemptPlay(video));
+
+    // Resume when tab becomes visible again
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden && video.paused) {
+        attemptPlay(video);
+      }
+    });
   }
-  if (mobileVideo) {
-    mobileVideo.addEventListener("loadeddata", () => attemptPlay(mobileVideo));
-  }
+
+  setupVideoPlay(heroVideo);
+  setupVideoPlay(mobileVideo);
 }
 
 // ========== INITIALIZE ==========
@@ -356,7 +360,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initStatusBar();
   initLightbox();
-  forceVideoPlay(); // Force video to play
-
-  console.log("FLIPS Yacht Investment initialized");
+  forceVideoPlay();
 });
