@@ -305,6 +305,48 @@ function initLightbox() {
   });
 }
 
+// ========== FORCE VIDEO AUTOPLAY ==========
+function forceVideoPlay() {
+  const heroVideo = document.getElementById("hero-video");
+  const mobileVideo = document.querySelector("video:not(#hero-video)");
+
+  function attemptPlay(video) {
+    if (!video) return;
+
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log("Video playing successfully");
+        })
+        .catch((error) => {
+          console.log("Autoplay prevented, retrying...", error);
+          // Retry after user interaction
+          document.addEventListener(
+            "click",
+            () => {
+              video.play();
+            },
+            { once: true }
+          );
+        });
+    }
+  }
+
+  // Try to play immediately
+  if (heroVideo) attemptPlay(heroVideo);
+  if (mobileVideo) attemptPlay(mobileVideo);
+
+  // Also try when video metadata loads
+  if (heroVideo) {
+    heroVideo.addEventListener("loadeddata", () => attemptPlay(heroVideo));
+  }
+  if (mobileVideo) {
+    mobileVideo.addEventListener("loadeddata", () => attemptPlay(mobileVideo));
+  }
+}
+
 // ========== INITIALIZE ==========
 document.addEventListener("DOMContentLoaded", () => {
   initGallery("merry", "merry-gallery");
@@ -314,6 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initStatusBar();
   initLightbox();
+  forceVideoPlay(); // Force video to play
 
   console.log("FLIPS Yacht Investment initialized");
 });
